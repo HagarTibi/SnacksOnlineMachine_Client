@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="472.0" prefWidth="705.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderConfirmPopUpController">
+    <children>
+        <HBox layoutX="162.0" layoutY="35.0" prefHeight="51.0" prefWidth="461.0">
+            <children>
+                <Text fx:id="welcometxt" fill="#52ac11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Order Confirmed" textAlignment="CENTER" translateX="90.0" translateY="20.0" wrappingWidth="327.26771545410156">
+                    <font>
+                        <Font name="Aharoni Bold" size="34.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <VBox layoutX="4.0" layoutY="-22.0" prefHeight="43.0" prefWidth="262.0" translateX="-10.0" AnchorPane.leftAnchor="4.0">
+            <children>
+                <VBox prefHeight="25.0" prefWidth="89.0" />
+            </children>
+        </VBox>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+        <Button fx:id="Xbt" layoutX="821.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+          <HBox layoutX="-27.0" layoutY="13.0" prefHeight="23.0" prefWidth="274.0" />
+      <BorderPane fx:id="workhere" layoutX="187.0" layoutY="117.0" prefHeight="346.0" prefWidth="399.0">
+         <center>
+            <AnchorPane prefHeight="346.0" prefWidth="446.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="totalPrice" layoutX="89.0" layoutY="14.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="416.0" text="Total price: ">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Label>
+                        <Button fx:id="Okbt" layoutX="194.0" layoutY="232.0" mnemonicParsing="false" onAction="#clickOnOk" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #057705;" text="OK" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="finishMsg" alignment="CENTER" layoutY="162.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="515.0" text="The machine prepares your order">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutY="192.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="515.0" text="Thank you for your purchase">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="AreapickUp" layoutX="89.0" layoutY="80.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="413.0" text="Pickup from: ">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="locationAndMachine" layoutX="90.0" layoutY="112.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="424.0" text="Machine: ">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="code" layoutX="90.0" layoutY="47.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="356.0" text="Code: ">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="areaOfDelivery" layoutX="89.0" layoutY="80.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="424.0" text="Area Of Delivery:">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="DeliveryAddress" layoutX="91.0" layoutY="112.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="424.0" text="Delivery Address:">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="areaEK" layoutX="87.0" layoutY="80.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="415.0" text="Area:">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+    </children>
+</AnchorPane>

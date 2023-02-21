@@ -1,0 +1,16 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#cardhboxpane{
+      -fx-hgap: 20px;
+    -fx-padding: 30px;
+
+    -fx-background-color:  #effae3;
+    -fx-background-radius: 30px;
+
+    -fx-border-radius: 29px;
+    -fx-border-width: 2.5px;
+    -fx-border-color: black;
+  
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 10, 0, 0, 0);
+}
+

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@reportTemplate.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrdersReportController">
+    <children>
+        <VBox layoutX="4.0" layoutY="-22.0" prefHeight="43.0" prefWidth="262.0" translateX="-10.0" AnchorPane.leftAnchor="4.0">
+            <children>
+                <VBox prefHeight="25.0" prefWidth="89.0" />
+            </children>
+        </VBox>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+        <Button fx:id="Backbt" layoutX="12.0" layoutY="479.0" mnemonicParsing="false" onAction="#Back" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+            <font>
+                <Font name="Calibri Bold" size="16.0" />
+            </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#X" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <TextFlow layoutX="4.0" layoutY="7.0" prefHeight="40.0" prefWidth="511.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login &gt; Manager Menu &gt; View Report" wrappingWidth="291.7819833755493">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text=" &gt; Monthly Orders Report" wrappingWidth="454.6982421875">
+                    <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                    </font>
+                </Text>
+            </children>
+        </TextFlow>
+        <BorderPane fx:id="workhere" layoutX="5.0" layoutY="105.0" prefHeight="326.0" prefWidth="895.0" stylesheets="@template.css">
+            <bottom>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox layoutX="32.0" layoutY="16.0" prefHeight="200.0" prefWidth="288.0">
+                            <children>
+                                <HBox prefHeight="40.0" prefWidth="221.0">
+                                    <children>
+                                        <HBox prefHeight="40.0" prefWidth="230.0">
+                                            <children>
+                                                <Label fx:id="Arealb" prefHeight="36.0" prefWidth="317.0" text="Area:" textFill="#168900" translateY="10.0">
+                                                    <font>
+                                                        <Font name="Calibri Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="Arealb1" prefHeight="8.0" prefWidth="367.0" translateX="-50.0" translateY="20.0">
+                                                    <font>
+                                                        <Font name="Calibri Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children></HBox>
+                                    </children></HBox>
+                                <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="230.0">
+                                    <children>
+                                        <Label fx:id="mostPurchlb" layoutX="113.0" layoutY="265.0" prefHeight="36.0" prefWidth="317.0" text="Most purchased:" textFill="#168900">
+                                            <font>
+                                                <Font name="Calibri Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="10.0" layoutY="50.0" prefHeight="40.0" prefWidth="230.0">
+                                    <children>
+                                        <Label fx:id="totalOrderQuatitylb" text="Total orders Quantity: " textFill="#168900" translateY="5.0">
+                                            <font>
+                                                <Font name="Calibri Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="totalOrderQuatitylb1" prefHeight="17.0" prefWidth="109.0" translateY="6.0">
+                                            <font>
+                                                <Font name="Calibri Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="363.0">
+                                    <children>
+                                        <Label fx:id="CanceledOrderlb1" />
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="40.0" prefWidth="363.0" />
+                            </children>
+                        </VBox>
+                        <PieChart fx:id="pieChart" layoutX="250.0" layoutY="14.0" prefHeight="373.0" prefWidth="591.0" AnchorPane.bottomAnchor="-60.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="54.0" />
+                        <VBox layoutX="-4.0" layoutY="29.0" prefHeight="223.0" prefWidth="35.0">
+                            <children>
+                                <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/area.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="4.0">
+                                    <image>
+                                        <Image url="@../images/star.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="8.0" translateY="20.0">
+                                    <image>
+                                        <Image url="@../images/dollar.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                        <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="12.0" layoutY="199.0">
+                            <image>
+                                <Image url="@../images/machineSnack.png" />
+                            </image>
+                        </ImageView>
+                        <ComboBox fx:id="SelectMachine" layoutX="57.0" layoutY="200.0" onAction="#PressSelectedMachinecombobox" prefHeight="26.0" prefWidth="165.0" promptText="Select Machine" style="-fx-background-color: green;" />
+                        <Label fx:id="errorlb" layoutX="82.0" layoutY="207.0" />
+                        <Label fx:id="selectMachinelb" layoutX="89.0" layoutY="208.0" />
+                        <Label fx:id="mostPurchlb1" layoutX="149.0" layoutY="59.0" prefHeight="27.0" prefWidth="211.0" translateX="4.0" translateY="2.0">
+                            <font>
+                                <Font name="Calibri Bold" size="16.0" />
+                            </font>
+                        </Label>
+                    <Label fx:id="Datelb" layoutX="5.0" layoutY="-7.0" prefHeight="36.0" prefWidth="155.0" underline="true">
+                        <font>
+                            <Font name="Aharoni Bold" size="24.0" />
+                        </font>
+                    </Label>
+                    </children>
+                </AnchorPane>
+            </bottom></BorderPane>
+        <Text layoutX="702.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
+            <font>
+                <Font name="Calibri Bold" size="15.0" />
+            </font>
+        </Text>
+        <Button fx:id="logout" layoutX="707.0" layoutY="8.0" mnemonicParsing="false" onAction="#LogOutClicked" prefHeight="26.0" prefWidth="34.0">
+            <font>
+                <Font name="Calibri Bold" size="11.0" />
+            </font>
+         <graphic>
+              <ImageView fitHeight="22.0" fitWidth="27.0">
+                  <image>
+                      <Image url="@../images/logout.png" />
+                  </image>
+              </ImageView>
+         </graphic>
+        </Button>
+        <Label layoutX="168.0" layoutY="55.0" prefHeight="40.0" prefWidth="438.0" text="OL(Pickup) &amp; EK- Orders Report" textFill="#52ac11" translateX="2.0" translateY="1.0" underline="true">
+            <font>
+                <Font name="Aharoni Bold" size="28.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

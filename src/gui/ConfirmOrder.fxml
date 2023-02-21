@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConfirmOrderController">
+    <children>
+      <TextFlow fx:id="machineLabel" layoutX="41.0" layoutY="116.0" prefHeight="34.0" prefWidth="256.0">
+         <children>
+            <Label fx:id="machine_id_title" prefHeight="22.0" prefWidth="79.0" text="Machine:" textFill="#20620f">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="machine_input" strokeType="OUTSIDE" strokeWidth="0.0" text="machine_input" wrappingWidth="123.40625">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+        <HBox fx:id="role" layoutX="21.0" layoutY="53.0" prefHeight="18.0" prefWidth="160.0" visible="false">
+            <children>
+                <Label fx:id="lbrole" prefHeight="35.0" prefWidth="41.0" text="Role:" textFill="#20620f">
+                    <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Text fx:id="txtrole" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Approved Client" translateY="5.0">
+                    <font>
+                        <Font name="Calibri" size="15.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <Button fx:id="Backbt" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#goBackToCatalog" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+            <font>
+                <Font name="Aharoni Bold" size="14.0" />
+            </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="logout" layoutX="674.0" layoutY="4.0" mnemonicParsing="false" onAction="#LogOutClicked" prefHeight="26.0" prefWidth="34.0" translateX="20.0" translateY="1.0">
+            <font>
+                <Font name="Calibri Bold" size="11.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="22.0" fitWidth="27.0">
+                    <image>
+                        <Image url="@../images/logout.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <TextFlow fx:id="pathEK" layoutX="-1.0" layoutY="6.0" prefHeight="25.0" prefWidth="402.0" textAlignment="RIGHT">
+            <Text text="Login&gt;">
+                <font>
+                    <Font name="Calibri" size="18.0" />
+                </font>
+         </Text>
+            <Text fx:id="EK_cust_sub" text="Customer Menu&gt;">
+                <font>
+                    <Font name="Calibri" size="18.0" />
+                </font>
+         </Text>
+            <Text text="Order Catalog&gt;">
+                <font>
+                    <Font name="Calibri" size="18.0" />
+                </font>
+         </Text>
+            <Text style="-fx-font-weight: bold" text="Confirm Order" wrappingWidth="117.3466796875">
+                <font>
+                    <Font name="Calibri" size="18.0" />
+                </font>
+         </Text>
+        </TextFlow>
+          <TextFlow layoutX="230.0" layoutY="75.0" prefHeight="68.0" prefWidth="443.0" textAlignment="CENTER">
+              <children>
+                  <Text fx:id="welcometxt" fill="#52ac11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Please Confirm Your Order" textAlignment="CENTER" wrappingWidth="392.7333984375">
+                      <font>
+                          <Font name="Aharoni Bold" size="34.0" />
+                      </font>
+            </Text>
+              </children>
+          </TextFlow>
+      <TableView fx:id="tableView" editable="true" layoutX="462.0" layoutY="133.0" prefHeight="243.0" prefWidth="422.0">
+        <columns>
+          <TableColumn fx:id="items_Col" editable="false" prefWidth="177.33331298828125" sortable="false" text="Items" />
+          <TableColumn fx:id="amount_Col" editable="false" prefWidth="84.0" sortable="false" text="Amount" />
+            <TableColumn fx:id="pricePerUnit_Col" editable="false" prefWidth="159.0" sortable="false" text="Price Per Unit" />
+        </columns>
+      </TableView>
+      <TextField fx:id="customerID" alignment="CENTER" editable="false" layoutX="227.0" layoutY="195.0" promptText="2085463120" />
+      <Text fill="#377706" layoutX="47.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID" wrappingWidth="83.765625">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#377706" layoutX="46.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Number">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="customerCreditCardNumber" alignment="CENTER" editable="false" layoutX="227.0" layoutY="252.0" promptText="4989 7772 6885 5525" />
+      <Text fill="#377706" layoutX="46.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card Experation Date">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cardExpDate" alignment="CENTER" editable="false" layoutX="227.0" layoutY="307.0" promptText="12-03-2027" />
+      <Text fill="#377706" layoutX="47.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVV Number">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cardCVV" alignment="CENTER" editable="false" layoutX="227.0" layoutY="367.0" promptText="907" />
+      <Button fx:id="confirmBtn" layoutX="631.0" layoutY="444.0" mnemonicParsing="false" onAction="#clickOnConfirm" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: green;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text fill="#377706" layoutX="553.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Total:" wrappingWidth="114.66668701171886">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="total_price_input" fill="#377706" layoutX="678.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total_price_input" underline="true" wrappingWidth="187.95947265625006">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextFlow fx:id="deliveyAddrLabel" layoutX="41.0" layoutY="143.0" prefHeight="34.0" prefWidth="256.0">
+         <children>
+            <Label fx:id="deliv_addr_title" prefHeight="22.0" prefWidth="142.0" text="Delivery Address:" textFill="#20620f">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="address_input" strokeType="OUTSIDE" strokeWidth="0.0" text="address_input" wrappingWidth="109.82373046875">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Text layoutX="687.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+      <TextFlow fx:id="pathOL" layoutX="-4.0" layoutY="7.0" prefHeight="23.0" prefWidth="519.0" textAlignment="RIGHT">
+         <children>
+            <Text text="Login&gt;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="OL_cust_sub" text="Customer Menu&gt;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text text="Remote Order&gt;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text text="Order Catalog&gt;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text style="-fx-font-weight: bold" text="Confirm Order" wrappingWidth="117.3466796875">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Button fx:id="cancelOrderBtn" layoutX="609.0" layoutY="490.0" mnemonicParsing="false" onAction="#CancelOrder" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: RED;" text="Cancel Order" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

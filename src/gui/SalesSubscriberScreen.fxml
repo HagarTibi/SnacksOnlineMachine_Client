@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SalesSubscriberScreenController">
+    <children>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+            <Button fx:id="Backbt" layoutX="12.0" layoutY="479.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+          <Button fx:id="logout" layoutX="830.0" layoutY="42.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" translateX="20.0" translateY="1.0">
+              <font>
+                  <Font name="Calibri Bold" size="11.0" />
+              </font>
+          </Button>
+      <ScrollPane layoutX="17.0" layoutY="138.0" prefHeight="326.0" prefWidth="898.0">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="327.0" prefWidth="895.0">
+               <children>
+                  <VBox layoutX="2.0" prefHeight="153.0" prefWidth="878.0" />
+                  <VBox layoutX="8.0" layoutY="164.0" prefHeight="150.0" prefWidth="878.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="22.0" fitWidth="27.0" layoutX="689.0" layoutY="6.0">
+         <image>
+            <Image url="@../images/logout.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="676.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" wrappingWidth="49.0">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="welcometxt" fill="#52ac11" layoutX="392.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Sales" wrappingWidth="91.26780700683594">
+         <font>
+            <Font name="Aharoni Bold" size="34.0" />
+         </font>
+      </Text>
+      <HBox layoutX="4.0" layoutY="6.0" prefHeight="26.0" prefWidth="328.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Subscriber Menu" wrappingWidth="147.79984521865845">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;SALES" wrappingWidth="126.13671875">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Button layoutX="732.0" layoutY="472.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="134.0" style="-fx-background-color: GREEN;" text="GET Sale" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="21.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

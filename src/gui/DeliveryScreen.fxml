@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DeliveryScreenController">
+    <children>
+        <HBox layoutX="189.0" layoutY="35.0" prefHeight="51.0" prefWidth="479.0" />
+        <HBox layoutX="626.0" layoutY="9.0" prefHeight="40.0" prefWidth="140.0" translateX="70.0" AnchorPane.bottomAnchor="513.3333333333334" />
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <HBox layoutX="653.0" layoutY="37.0" prefHeight="43.0" prefWidth="183.0">
+            <children>
+            </children>
+        </HBox>
+        <TextFlow layoutX="5.0" layoutY="3.0" prefHeight="22.0" prefWidth="200.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Delivery Menu" wrappingWidth="158.19986963272095">
+                    <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                    </font>
+                </Text>
+            </children>
+        </TextFlow>
+        <Text fx:id="welcometxt" fill="#52ac11" layoutX="221.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text=" Welcome Back " wrappingWidth="255.0">
+            <font>
+                <Font name="Aharoni Bold" size="34.0" />
+            </font>
+        </Text>
+        <Text fx:id="txtName" fill="#52ac11" layoutX="470.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" translateY="2.0" wrappingWidth="200.00000000000006">
+            <font>
+                <Font name="Aharoni Bold" size="34.0" />
+            </font>
+        </Text>
+        <AnchorPane layoutX="3.0" layoutY="103.0" prefHeight="402.0" prefWidth="898.0">
+            <children>
+                <Button fx:id="btnDeliveryOrders" layoutX="84.0" layoutY="107.0" mnemonicParsing="false" onAction="#deliveryOrders" prefHeight="58.0" prefWidth="170.0" style="-fx-background-color: green;" text="Delivery Orders" textFill="WHITE">
+
+                    <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                    </font>
+                </Button>
+            <ImageView fitHeight="269.0" fitWidth="293.0" layoutX="483.0" layoutY="67.0">
+               <image>
+                  <Image url="@../images/deliveryMan.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="53.0" layoutX="23.0" layoutY="111.0">
+               <image>
+                  <Image url="@../images/machine.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <Button fx:id="logout" layoutX="690.0" layoutY="6.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="26.0" prefWidth="34.0">
+            <font>
+                <Font name="Calibri Bold" size="11.0" />
+            </font>
+            <graphic>
+                <ImageView fx:id="imgLogout" fitHeight="22.0" fitWidth="27.0">
+                    <image>
+                        <Image url="@../images/logout.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Text layoutX="711.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" translateX="-19.0">
+            <font>
+                <Font name="Calibri Bold" size="15.0" />
+            </font>
+        </Text>
+      <TextFlow layoutX="7.0" layoutY="34.0" prefHeight="23.0" prefWidth="289.0">
+         <children>
+            <Text fill="#20620f" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+                <Text fx:id="txtrole" fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text=" DeliveryMan" wrappingWidth="169.84844207763672">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                    </font>
+                </Text>
+         </children>
+      </TextFlow>
+    </children>
+</AnchorPane>

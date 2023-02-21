@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+    <children>
+        <HBox layoutX="136.0" layoutY="37.0" prefHeight="51.0" prefWidth="479.0">
+            <children>
+                <Text fx:id="welcometxt" fill="#52ac11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliber;" text=" Welcome To EKrut " textAlignment="CENTER" translateX="90.0" translateY="20.0" wrappingWidth="393.6677551269531">
+                    <font>
+                        <Font name="Aharoni Bold" size="34.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <HBox layoutX="626.0" layoutY="9.0" prefHeight="40.0" prefWidth="140.0" translateX="70.0" AnchorPane.bottomAnchor="513.3333333333334" />
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <BorderPane fx:id="workhere" layoutX="230.0" layoutY="119.0" prefHeight="346.0" prefWidth="399.0">
+         <center>
+            <AnchorPane prefHeight="346.0" prefWidth="416.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtuser" layoutX="85.0" layoutY="57.0" prefHeight="25.0" prefWidth="229.0" promptText="User name">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="loginbtn" layoutX="160.0" layoutY="173.0" mnemonicParsing="false" onAction="#LoginCostumer" prefHeight="18.0" prefWidth="78.0" style="-fx-background-color: #057705;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="45.0" layoutY="124.0">
+                     <image>
+                        <Image url="@../images/password.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="46.0" layoutY="55.0">
+                     <image>
+                        <Image url="@../images/login.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblConfiguration" layoutX="76.0" prefHeight="28.0" prefWidth="242.0" textAlignment="CENTER" textFill="GREEN">
+                     <font>
+                        <Font name="Aharoni Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtError" fill="RED" layoutX="114.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="170.93670654296875">
+                     <font>
+                        <Font name="Calibri" size="15.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="txtpassword" layoutX="83.0" layoutY="124.0" prefHeight="25.0" prefWidth="229.0" promptText="Password">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane layoutX="696.0" layoutY="169.0" prefHeight="146.0" prefWidth="166.0">
+         <children>
+            <Label layoutX="53.0" layoutY="103.0" stylesheets="@template.css" text="Fast LogIn" textFill="#057705" translateX="-4.0">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="123.0" stylesheets="@template.css" text="For Subscribers" textFill="#057705" translateX="-4.0">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnFastLogIn" layoutX="14.0" mnemonicParsing="false" onAction="#fastLogIn" prefHeight="103.0" prefWidth="133.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fx:id="imgFastLogIn" fitHeight="95.0" fitWidth="114.0">
+                     <image>
+                        <Image url="@../images/fastLogin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Hyperlink fx:id="linktoregister" layoutX="716.0" layoutY="315.0" onAction="#updatetoSubscriber" text="Upgrade to subscriber" textFill="#a1379c" />
+    </children>
+</AnchorPane>

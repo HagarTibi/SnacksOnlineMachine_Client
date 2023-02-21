@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SalesCatalogScreenController">
+    <children>
+        <HBox layoutX="189.0" layoutY="35.0" prefHeight="51.0" prefWidth="479.0" />
+            <Button fx:id="Backbt" layoutX="14.0" layoutY="458.0" mnemonicParsing="false" onAction="#onClickBack" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <TextFlow layoutX="4.0" layoutY="4.0" prefHeight="21.0" prefWidth="526.0">
+         <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+                  <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Manager Menu" wrappingWidth="134.9998574256897">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Sales Catalog" wrappingWidth="124.79998779296875">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+          <Text fx:id="welcometxt" fill="#52ac11" layoutX="321.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Sales Catalog" wrappingWidth="238.46774291992188">
+              <font>
+                  <Font name="Aharoni Bold" size="34.0" />
+              </font>
+          </Text>
+      <AnchorPane layoutY="87.0" prefHeight="413.0" prefWidth="902.0">
+         <children>
+            <ScrollPane fx:id="leftscroll" layoutX="20.0" layoutY="21.0" prefHeight="330.0" prefWidth="462.0">
+               <content>
+                    <VBox fx:id="vboxLeft" />
+               </content>
+            </ScrollPane>
+            <ScrollPane layoutX="485.0" layoutY="21.0" prefHeight="330.0" prefWidth="406.0">
+               <content>
+                  <VBox fx:id="vboxRight" />
+               </content>
+            </ScrollPane>
+            <Button fx:id="initilizeSales" layoutX="696.0" layoutY="387.0" mnemonicParsing="false" onAction="#onClickInitilizaAll" style="-fx-background-color: green;" text="Initialize Sales" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancel_AllSales" layoutX="554.0" layoutY="387.0" mnemonicParsing="false" onAction="#onClickCancelAll" style="-fx-background-color: rgb(105, 204, 0);" text="Clear all" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="539.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please notice to press initialize to save any changes">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="690.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" wrappingWidth="50.981201171875">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="logout" layoutX="682.0" layoutY="4.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="43.0" prefWidth="66.0">
+         <font>
+            <Font name="Calibri Bold" size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="27.0" y="3.0">
+               <image>
+                  <Image url="@../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

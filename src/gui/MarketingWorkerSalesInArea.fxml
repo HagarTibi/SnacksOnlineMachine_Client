@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MarketingWorkerSalesInAreaController">
+    <children>
+      <TextFlow layoutX="25.0" layoutY="104.0" prefHeight="22.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="txtlocation" fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="109.2919921875">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="25.0" layoutY="68.0" prefHeight="22.0" prefWidth="373.0" />
+      <Button fx:id="logout" layoutX="700.0" layoutY="16.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="26.0" prefWidth="34.0">
+         <font>
+            <Font name="Calibri Bold" size="11.0" />
+         </font>
+      </Button>
+        <VBox layoutX="4.0" layoutY="-22.0" prefHeight="43.0" prefWidth="262.0" translateX="-10.0" AnchorPane.leftAnchor="4.0">
+            <children>
+                <VBox prefHeight="25.0" prefWidth="89.0" />
+            </children>
+        </VBox>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+            <Button fx:id="Backbt" layoutX="12.0" layoutY="479.0" mnemonicParsing="false" onAction="#BackToMarketingWrokerMenu" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+         <font>
+            <Font name="Aharoni Bold" size="14.0" />
+         </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <Button fx:id="logout" layoutX="686.0" layoutY="6.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="26.0" prefWidth="34.0">
+         <font>
+            <Font name="Calibri Bold" size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="27.0">
+               <image>
+                  <Image url="@../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text layoutX="685.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+      <BorderPane fx:id="workhere" layoutX="4.0" layoutY="128.0" prefHeight="326.0" prefWidth="895.0" stylesheets="@template.css">
+         <opaqueInsets>
+            <Insets left="400.0" />
+         </opaqueInsets>
+         <center>
+            <AnchorPane prefHeight="278.0" prefWidth="895.0" stylesheets="@salecard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="37.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/saleicon.png" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane fx:id="scrollsales" layoutX="238.0" layoutY="16.0" prefHeight="309.0" prefWidth="442.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <content>
+                        <AnchorPane fx:id="anchorPaneIntoScroll" prefHeight="276.0" prefWidth="423.0" stylesheets="@scrollpane.css">
+                           <opaqueInsets>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </opaqueInsets>
+                           <children>
+                              <VBox fx:id="vboxleftside" alignment="CENTER" layoutX="18.0" layoutY="5.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="50.0" top="50.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="710.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/saleicon.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#52ac11" layoutX="236.0" layoutY="-18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marketing Worker Sales In Area">
+                     <font>
+                        <Font name="Aharoni Bold" size="28.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="imgonscroll" fitHeight="150.0" fitWidth="200.0" layoutX="373.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/saleicon.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="txtSuccessfulUpdate" fill="#20620f" layoutX="409.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.968994140625">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </center></BorderPane>
+      <TextFlow layoutX="15.0" layoutY="13.0" prefHeight="51.0" prefWidth="496.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login&gt;Marketing Worker Menu" wrappingWidth="39.786827087402344">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+                  <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Marketing Worker Sales In Area" wrappingWidth="484.4833984375">
+                      <font>
+                          <Font name="Calibri Bold" size="18.0" />
+                      </font>
+                  </Text>
+         </children>
+      </TextFlow>
+    </children>
+   <stylesheets>
+      <URL value="@template.css" />
+      <URL value="@scrollpane.css" />
+   </stylesheets>
+</AnchorPane>

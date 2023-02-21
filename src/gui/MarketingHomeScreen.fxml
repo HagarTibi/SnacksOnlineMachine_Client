@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MarketingManagerHomeController">
+    <children>
+        <HBox layoutX="180.0" layoutY="40.0" prefHeight="51.0" prefWidth="479.0" translateX="-40.0" translateY="70.0">
+         <children>
+                <Text fx:id="welcometxt" fill="#52ac11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text=" Welcome Back Marketing Manager" textAlignment="CENTER" wrappingWidth="620.8677520751953">
+                    <font>
+                        <Font name="Aharoni Bold" size="34.0" />
+                    </font>
+                </Text>
+         </children></HBox>
+          <Button fx:id="logout" layoutX="702.0" layoutY="4.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="26.0" prefWidth="34.0">
+              <font>
+                  <Font name="Calibri Bold" size="11.0" />
+              </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="27.0">
+               <image>
+                  <Image url="@../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+          </Button>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <TextFlow layoutX="21.0" layoutY="34.0" prefHeight="22.0" prefWidth="200.0" />
+      <AnchorPane layoutX="1.0" layoutY="114.0" prefHeight="402.0" prefWidth="898.0" stylesheets="@template.css">
+         <children>
+            <Text fill="#057705" layoutX="102.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Initialize Sales" underline="true" wrappingWidth="175.2677764892578">
+               <font>
+                  <Font name="Aharoni Bold" size="25.0" />
+               </font>
+            </Text>
+            <Button fx:id="newSale" layoutX="95.0" layoutY="158.0" mnemonicParsing="false" onAction="#onClickGenerateNewSale" prefHeight="34.0" prefWidth="175.0" style="-fx-background-color: green;" text="Generate New Sale" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="206.0" fitWidth="367.0" layoutX="425.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/manager.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="95.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/plusicon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="orderCatalog" layoutX="95.0" layoutY="215.0" mnemonicParsing="false" onAction="#onClickOrderCatalog" prefHeight="34.0" prefWidth="175.0" style="-fx-background-color: green;" text="Sales Catalog" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="95.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ordereport.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="720.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" translateX="-19.0">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+            <Text layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                <font>
+                    <Font name="Calibri" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="#120101" layoutX="54.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Manager Menu" wrappingWidth="158.19986963272095">
+                <font>
+                    <Font name="Calibri Bold" size="18.0" />
+                </font>
+            </Text>
+      <TextFlow layoutX="14.0" layoutY="45.0" prefHeight="22.0" prefWidth="200.0">
+         <children>
+            <Text fill="#20620f" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:  ">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtrole" fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Marketing Manager" wrappingWidth="146.6484603881836">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+    </children>
+</AnchorPane>

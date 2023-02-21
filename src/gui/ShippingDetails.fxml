@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ShippingDetailsController">
+    <children>
+        <HBox layoutX="21.0" layoutY="53.0" prefHeight="18.0" prefWidth="160.0">
+            <children>
+                <Label fx:id="lbrole" prefHeight="35.0" prefWidth="41.0" text="Role:" textFill="#20620f">
+                    <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                    </font>
+                </Label>
+            <Text fx:id="txtrole" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Approved Client" translateY="5.0">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Text>
+            </children>
+        </HBox>
+        <HBox layoutX="189.0" layoutY="35.0" prefHeight="51.0" prefWidth="479.0">
+            <children>
+                <Text fx:id="welcometxt" fill="#52ac11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Shipping Details" textAlignment="CENTER" textOrigin="CENTER" translateX="70.0" translateY="20.0" wrappingWidth="365.6677551269531">
+                    <font>
+                        <Font name="Aharoni Bold" size="34.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <HBox layoutX="626.0" layoutY="9.0" prefHeight="40.0" prefWidth="140.0" translateX="70.0" AnchorPane.bottomAnchor="513.3333333333334" />
+        <VBox layoutX="4.0" layoutY="-22.0" prefHeight="43.0" prefWidth="262.0" translateX="-10.0" AnchorPane.leftAnchor="4.0">
+            <children>
+                <VBox prefHeight="25.0" prefWidth="89.0" />
+            </children>
+        </VBox>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+            <Button fx:id="Backbt" layoutX="12.0" layoutY="479.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+          <Button fx:id="logout" layoutX="830.0" layoutY="42.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" translateX="20.0" translateY="1.0">
+              <font>
+                  <Font name="Calibri Bold" size="11.0" />
+              </font>
+          </Button>
+      <HBox layoutX="653.0" layoutY="37.0" prefHeight="43.0" prefWidth="183.0">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="136.0" translateX="30.0">
+               <image>
+                  <Image url="@/images/logo3 EKrut.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <TextFlow prefHeight="40.0" prefWidth="456.0">
+         <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+                  <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Customer Menu" wrappingWidth="158.19986963272095">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Remote Order">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Shipping Details" wrappingWidth="156.72088623046875">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <BorderPane fx:id="workhere" layoutX="230.0" layoutY="119.0" prefHeight="346.0" prefWidth="399.0">
+         <right>
+            <AnchorPane prefHeight="346.0" prefWidth="373.0" translateX="-10.0" translateY="-25.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="lblStreet" layoutX="134.0" layoutY="146.0" prefHeight="25.0" prefWidth="218.0" />
+                  <TextField fx:id="lblCity" layoutX="134.0" layoutY="88.0" prefHeight="25.0" prefWidth="218.0" />
+                  <Hyperlink fx:id="linktoregister" layoutX="90.0" layoutY="303.0" text="Must enter shipping address information" textFill="RED">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font></Hyperlink>
+                  <Label fx:id="txtCity" layoutX="41.0" layoutY="89.0" text="City">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtStreet" layoutX="40.0" layoutY="147.0" text="Street">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="74.0" layoutY="89.0" text="*" textFill="#ff3f3f">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="106.0" layoutY="199.0" text="*" textFill="#ff3f3f">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="PickupBtn" layoutX="105.0" layoutY="254.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #057705;" text="Go to Catalog" textFill="WHITE" translateX="10.0">
+                     <font>
+                        <Font name="Calibri Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="lblPincode" layoutX="134.0" layoutY="198.0" prefHeight="25.0" prefWidth="218.0" />
+                  <Label fx:id="txtPincode" layoutX="40.0" layoutY="198.0" text="Pincode">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="91.0" layoutY="148.0" text="*" textFill="#ff3f3f">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+      <ImageView fitHeight="22.0" fitWidth="27.0" layoutX="699.0" layoutY="16.0" translateX="-5.0" translateY="-10.0">
+         <image>
+            <Image url="@../images/logout.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="686.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" translateX="-5.0" translateY="-10.0" wrappingWidth="49.0">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="142.0" fitWidth="168.0" layoutX="661.0" layoutY="313.0">
+         <image>
+            <Image url="@../images/Shipping.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#CancelOrderBtn{
+  -fx-background-color:rgb(255, 255, 255);
+}
+#CheckoutBtn{
+  -fx-background-color:rgb(58, 119, 4);
+}
+#plusBtn{
+  -fx-background-color:rgb(68, 141, 2);
+}
+#minusBtn{
+  -fx-background-color:rgb(255, 84, 86);
+}
+#cartCard{
+  -fx-background-color:rgb(232,241,208);
+}
+#cartField{
+  -fx-background-color:rgb(232,241,208);
+}
+#item_count{
+  -fx-background-color:rgb(255, 255, 255);
+}
+#cancelItemBtn{
+  -fx-background-color:rgb(0, 0, 0);
+}
+
+#itemCardBox{
+  -fx-background-color:rgb(232,241,208);
+}
+#addToCartBtn{
+  -fx-background-color:rgb(33, 136, 4);
+}
+
+

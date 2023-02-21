@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CEOController">
+    <children>
+        <HBox layoutX="626.0" layoutY="9.0" prefHeight="40.0" prefWidth="140.0" translateX="70.0" AnchorPane.bottomAnchor="513.3333333333334" />
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#X" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <HBox layoutX="653.0" layoutY="37.0" prefHeight="43.0" prefWidth="183.0">
+            <children>
+            </children>
+        </HBox>
+        <TextFlow layoutX="5.0" layoutY="3.0" prefHeight="22.0" prefWidth="200.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;CEO Menu" wrappingWidth="158.19986963272095">
+                    <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                    </font>
+                </Text>
+            </children>
+        </TextFlow>
+        <AnchorPane layoutX="4.0" layoutY="107.0" prefHeight="402.0" prefWidth="898.0">
+            <children>
+                <ImageView fitHeight="226.0" fitWidth="183.0" layoutX="606.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/ceo.png" />
+                    </image>
+                </ImageView>
+                <ComboBox fx:id="selectAreaBox" layoutX="53.0" layoutY="116.0" onAction="#SelectAera" prefHeight="30.0" prefWidth="150.0" promptText="Select Area" />
+                <Text fx:id="welcaometxt1" layoutX="7.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Select Area to watch Menu Reports" underline="true">
+                    <font>
+                        <Font name="Calibri Bold" size="23.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="14.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/area.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Button fx:id="logout" layoutX="690.0" layoutY="6.0" mnemonicParsing="false" onAction="#logOutClicked" prefHeight="26.0" prefWidth="34.0">
+            <font>
+                <Font name="Calibri Bold" size="11.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="22.0" fitWidth="27.0">
+                    <image>
+                        <Image url="@../images/logout.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Text layoutX="711.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" translateX="-19.0">
+            <font>
+                <Font name="Calibri Bold" size="15.0" />
+            </font>
+        </Text>
+        <Text fx:id="lbrole" fill="GREEN" layoutX="14.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+            <font>
+                <Font name="Calibri Bold" size="16.0" />
+            </font></Text>
+          <Text fx:id="welcaometxt" fill="#52ac11" layoutX="245.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back">
+              <font>
+                  <Font name="Aharoni Bold" size="36.0" />
+              </font>
+          </Text>
+      <Text fx:id="name" fill="#52ac11" layoutX="503.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.0">
+         <font>
+            <Font name="Aharoni Bold" size="36.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

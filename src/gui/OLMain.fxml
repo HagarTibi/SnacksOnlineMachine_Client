@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OLMainController">
+    <children>
+        <HBox layoutX="21.0" layoutY="53.0" prefHeight="22.0" prefWidth="212.0" />
+        <HBox layoutX="189.0" layoutY="35.0" prefHeight="51.0" prefWidth="479.0">
+            <children>
+                <Text fx:id="welcometxt" fill="#52ac11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Create Remote Order" translateX="90.0" translateY="20.0" wrappingWidth="412.86778259277344">
+                    <font>
+                        <Font name="Aharoni Bold" size="34.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <VBox layoutX="4.0" layoutY="-22.0" prefHeight="43.0" prefWidth="262.0" translateX="-10.0" AnchorPane.leftAnchor="4.0">
+            <children>
+                <VBox prefHeight="25.0" prefWidth="89.0" />
+            </children>
+        </VBox>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+            <Button fx:id="Backbt" layoutX="12.0" layoutY="479.0" mnemonicParsing="false" onAction="#GoBackToHomeScreen" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+          <Button fx:id="logout" layoutX="661.0" layoutY="8.0" mnemonicParsing="false" onAction="#LogOutClicked" prefHeight="26.0" prefWidth="34.0" translateX="20.0" translateY="1.0">
+              <font>
+                  <Font name="Calibri Bold" size="11.0" />
+              </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="27.0">
+               <image>
+                  <Image url="@../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+          </Button>
+      <HBox layoutX="653.0" layoutY="37.0" prefHeight="43.0" prefWidth="183.0">
+
+      </HBox>
+      <TextFlow layoutX="4.0" prefHeight="26.0" prefWidth="356.0">
+         <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+                  <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Customer Menu" wrappingWidth="158.19986963272095">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Remote Order">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <BorderPane fx:id="workhere" layoutX="4.0" layoutY="128.0" prefHeight="326.0" prefWidth="895.0" stylesheets="@template.css">
+         <left>
+            <Pane blendMode="SRC_ATOP" prefHeight="338.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fontSmoothingType="LCD" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select remote option:" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="223.0" fitWidth="268.0" layoutX="604.0" layoutY="23.0">
+                     <image>
+                        <Image url="@../images/shipPickup.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="20.0" layoutY="87.0" prefHeight="200.0" prefWidth="212.0">
+                     <children>
+                        <CheckBox fx:id="selfPickupOp" mnemonicParsing="false" onAction="#handleSelfPickUpBox" prefHeight="90.0" prefWidth="214.0" text="Self Pickup" textFill="#125702">
+                           <font>
+                              <Font name="Calibri Bold" size="24.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="deliveryOp" mnemonicParsing="false" onAction="#handleDeliveryBox" prefHeight="90.0" prefWidth="224.0" text="Delivery" textFill="#125702">
+                           <font>
+                              <Font name="Calibri Bold" size="24.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+                  <ComboBox fx:id="chooseArea" layoutX="199.0" layoutY="122.0" onAction="#handleAreaSelection" prefHeight="25.0" prefWidth="114.0" promptText="Select Area" />
+                  <ComboBox fx:id="chooseMachine" layoutX="349.0" layoutY="122.0" onAction="#handleLocationSelection" prefHeight="25.0" prefWidth="158.0" promptText="Select Machine" />
+                  <TextField fx:id="userAddrInput" layoutX="329.0" layoutY="247.0" prefHeight="34.0" prefWidth="237.0" promptText="123 Main Street, AnyCity" />
+                  <Text fx:id="enterYourAddLine" fill="#09722e" layoutX="331.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter Delivery Address" underline="true">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="chooseAreaForDelivery" layoutX="184.0" layoutY="212.0" onAction="#handleAreaSelectionDelivery" prefHeight="25.0" prefWidth="114.0" promptText="Select Area" />
+               </children>
+            </Pane>
+         </left></BorderPane>
+      <Text layoutX="676.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" wrappingWidth="49.0">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="continueToOrder" layoutX="579.0" layoutY="460.0" mnemonicParsing="false" onAction="#continueToOrderBtn" prefHeight="44.0" prefWidth="231.0" style="-fx-background-color: #057705;" text="Continue to Order" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Button>
+      <Text fx:id="errorMsg" fill="RED" layoutX="548.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must Choose Remote Order Option">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

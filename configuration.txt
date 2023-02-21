@@ -1,0 +1,4 @@
+configuration:OL:
+area:North:
+machine:north1:
+location:Haifa

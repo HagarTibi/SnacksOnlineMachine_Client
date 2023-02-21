@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" stylesheets="@template.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageAlertsManagerController">
+    <children>
+        <HBox layoutX="21.0" layoutY="49.0" prefHeight="26.0" prefWidth="212.0" />
+        <HBox layoutX="159.0" layoutY="62.0" prefHeight="51.0" prefWidth="293.0">
+            <children>
+                <Text fx:id="welcometxt" fill="#52ac11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Alerts Table For Manager" translateX="90.0" translateY="20.0" wrappingWidth="426.86778259277344">
+                    <font>
+                        <Font name="Aharoni Bold" size="34.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+            <Button fx:id="Backbt" layoutX="12.0" layoutY="479.0" mnemonicParsing="false" onAction="#GoBackToHomeScreen" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font></Button>
+        <Button fx:id="Xbt" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+          <Button fx:id="logout" layoutX="662.0" layoutY="3.0" mnemonicParsing="false" onAction="#LogOutClicked" prefHeight="26.0" prefWidth="34.0" translateX="20.0" translateY="1.0">
+              <font>
+                  <Font name="Calibri Bold" size="11.0" />
+              </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="27.0">
+               <image>
+                  <Image url="@../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+          </Button>
+      <TextFlow layoutX="6.0" layoutY="3.0" prefHeight="40.0" prefWidth="306.0">
+         <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+                  <Text fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Manager Menu" wrappingWidth="158.19986963272095">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Manage Alerts">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <BorderPane fx:id="workhere" layoutX="4.0" layoutY="128.0" prefHeight="326.0" prefWidth="895.0" stylesheets="@template.css">
+         <left>
+            <Pane blendMode="SRC_ATOP" prefHeight="338.0" prefWidth="898.0" stylesheets="@template.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="AlertTable" layoutX="54.0" prefHeight="176.0" prefWidth="480.0">
+                    <columns>
+                      <TableColumn fx:id="alertIdColumn" prefWidth="120.0" text="Alert Number" />
+                      <TableColumn fx:id="machineIdColumn" prefWidth="120.0" text="Machine ID" />
+                        <TableColumn fx:id="statusColumn" prefWidth="120.0" text="Status" />
+                        <TableColumn fx:id="dateColumn" prefWidth="120.0" text="Date" />
+                    </columns>
+                  </TableView>
+                  <Text layoutX="14.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose inventory and sales worker:">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="AlertComboBox" layoutX="384.0" layoutY="211.0" prefHeight="26.0" prefWidth="178.0" promptText="Select Worker" style="-fx-background-color: green;" />
+                  <Button fx:id="ViewAlert" layoutX="730.0" layoutY="212.0" mnemonicParsing="false" onAction="#whenClickingViewAlertBtn" style="-fx-background-color: green;" text="Send" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="whichAlertIdComboBox" layoutX="571.0" layoutY="212.0" prefHeight="26.0" prefWidth="152.0" promptText="Select Alert" style="-fx-background-color: green;" />
+                  <Text fx:id="textForEmptyFields" fill="#f20808" layoutX="622.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You must select Worker and Alert!" wrappingWidth="265.0">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+         </left></BorderPane>
+      <Text layoutX="676.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" wrappingWidth="49.0">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

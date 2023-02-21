@@ -1,0 +1,90 @@
+
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root {
+	-fx-background-image:url(../images/background.png);
+	-fx-background-size:cover;
+}
+#workhere{
+	/*-fx-background-color:rgb(144, 200, 116);*/
+}
+#welcometxt{
+	-fx-color: rgb(255,127,80,0.85);
+}
+#Backbt{
+  -fx-background-color:rgb(105, 204, 0);
+}
+#txtrole{
+	-fx-color: rgb(0,128,0);
+}
+#lbrole{
+	-fx-color: rgb(0,128,0);
+}
+#confirmBtn{
+    -fx-background-color:rgb(105, 204, 0);
+}
+
+#problemBtn{
+    -fx-background-color:rgb(105, 204, 0);
+}
+
+#Xbt{
+	-fx-background-color:rgb(105, 204, 0);
+	-fx-font-color:white;
+}
+
+#items_Col{
+    -fx-background-color:rgb(126, 241, 7);
+}
+
+#amount_Col{
+    -fx-background-color:rgb(126, 241, 7);
+}
+
+#pricePerUnit_Col{
+    -fx-background-color:rgb(126, 241, 7);
+}
+
+#logout{
+	-fx-background-color:rgb(153, 255, 51,0.01);
+}
+
+.combo-box-base .text{
+    -fx-fill: rgb(255,255,255);
+	-fx-font: rgb(255,255,255);
+	-fx-font-family:Calibre;
+	-fx-text-alignment:center;
+}
+.combo-box .list-cell {
+    -fx-background-color: #057705;
+    -fx-alignment: center;
+    -fx-text-size:16;
+}
+.combo-box .arrow {
+    -fx-background-color: white;
+    -fx-text-size:16;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color:  #057705;
+
+    -fx-size: 5;
+}
+.table-cell.colored-column {
+    -fx-background-color: rgb(232,241,208);
+}
+.table-column.colored-column {
+    -fx-background-color: rgb(232,241,208);
+}
+
+#items_Col{
+    -fx-background-color:rgb(232,241,208);
+}
+
+#amount_Col{
+    -fx-background-color:rgb(232,241,208);
+}
+
+#pricePerUnit_Col{
+    -fx-background-color:rgb(232,241,208);
+}

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="547.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderCatalogScreenController">
+    <children>
+        <VBox layoutX="-37.0" layoutY="521.0" prefHeight="43.0" prefWidth="77.0" translateX="45.0" />
+            <Button fx:id="Backbt" layoutX="12.0" layoutY="479.0" mnemonicParsing="false" onAction="#GoBackToHomeScreen" prefHeight="33.0" prefWidth="65.0" text="Back" textFill="WHITE" translateY="45.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Button>
+        <Button fx:id="Xbt" layoutX="961.0" layoutY="6.0" mnemonicParsing="false" onAction="#disconnectClient" prefHeight="25.0" prefWidth="41.0" text="X" textAlignment="CENTER" textFill="#fff2f2" translateY="1.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <TextFlow fx:id="pathOL" layoutX="4.0" layoutY="4.0" prefHeight="21.0" prefWidth="526.0">
+         <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+                  <Text fx:id="OL_cust_sub" fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Customer Menu" wrappingWidth="134.9998574256897">
+                      <font>
+                          <Font name="Calibri" size="18.0" />
+                      </font>
+                  </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Remote Order">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Order Catalog" wrappingWidth="124.79998779296875">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <ScrollPane layoutX="8.0" layoutY="142.0" prefHeight="306.0" prefWidth="535.0">
+        <content>
+          <AnchorPane fx:id="catalogField" prefHeight="303.0" prefWidth="533.0">
+               <children>
+                  <VBox fx:id="catalogItemsLayout" alignment="BOTTOM_CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <AnchorPane layoutX="556.0" layoutY="142.0" prefHeight="306.0" prefWidth="454.0">
+         <children>
+            <Button fx:id="CancelOrderBtn" layoutX="10.0" layoutY="258.0" mnemonicParsing="false" onAction="#cancelAllItems" prefHeight="35.0" prefWidth="90.0" text="Cancel All" textFill="#393535">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font></Button>
+            <Button fx:id="CheckoutBtn" layoutX="339.0" layoutY="258.0" mnemonicParsing="false" onAction="#GoToCheckout" prefHeight="35.0" prefWidth="96.0" text="Checkout" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font></Button>
+            <Text layoutX="138.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: ">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font></Text>
+            <Text fx:id="updatedSum" layoutX="211.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="number">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font></Text>
+            <ScrollPane layoutX="-6.0" prefHeight="241.0" prefWidth="461.0">
+               <content>
+                  <AnchorPane fx:id="cartField" prefHeight="303.0" prefWidth="452.0">
+                     <children>
+                        <VBox fx:id="cartLayout" alignment="CENTER">
+                           <opaqueInsets>
+                              <Insets left="20.0" />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+          <Text fx:id="welcometxt" fill="#52ac11" layoutX="411.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: caliberi;" text="Order Catalog" wrappingWidth="238.46774291992188">
+              <font>
+                  <Font name="Aharoni Bold" size="34.0" />
+              </font>
+          </Text>
+      <Text fx:id="errorMsg" fill="RED" layoutX="634.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must choose at least one item" wrappingWidth="264.8955078125">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="741.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" wrappingWidth="52.89453125">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Text>
+      <TextFlow fx:id="pathEK" layoutX="4.0" layoutY="4.0" prefHeight="21.0" prefWidth="526.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="39.786827087402344">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="EK_cust_sub" fill="#120101" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Customer Menu" wrappingWidth="134.9998574256897">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Order Catalog" wrappingWidth="124.79998779296875">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <HBox layoutX="45.0" layoutY="61.0" prefHeight="69.0" prefWidth="567.0">
+         <children>
+            <AnchorPane fx:id="disscountPane" prefHeight="69.0" prefWidth="572.0">
+               <children>
+                  <ImageView fx:id="saleImg" fitHeight="69.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="saleText" fill="#fca103" layoutX="130.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="disscount_msg" wrappingWidth="404.375">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+          <Button fx:id="logout" layoutX="749.0" layoutY="12.0" mnemonicParsing="false" onAction="#LogOutClicked" prefHeight="26.0" prefWidth="34.0">
+              <font>
+                  <Font name="Calibri Bold" size="11.0" />
+              </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="27.0" y="3.0">
+               <image>
+                  <Image url="@../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+          </Button>
+    </children>
+   <stylesheets>
+      <URL value="@template.css" />
+      <URL value="@orderScreen.css" />
+   </stylesheets>
+</AnchorPane>
